@@ -1,49 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/note_background">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:text="Click the button to add note" />
+
+    <ImageButton
+        android:id="@+id/voiceSearchBtn"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:src="@drawable/microphone_icon"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
 
     <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/resultTable"
+        android:layout_width="180px"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/voiceSearchBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/backBtn">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <Button
-                android:id="@+id/voiceSearchBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Voice Search" />
-        </TableRow>
+            android:layout_height="match_parent" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Click button to insert text" />
-        </TableRow>
+            android:layout_height="match_parent" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:id="@+id/noteVoiceText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Text will appear here" />
-        </TableRow>
+            android:layout_height="match_parent" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-        </TableRow>
+            android:layout_height="match_parent" />
     </TableLayout>
 
-</LinearLayout>
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignEnd="@+id/voiceSearchBtn"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/back_button"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        />
+
+</RelativeLayout>

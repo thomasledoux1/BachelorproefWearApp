@@ -13,8 +13,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends Activity {
-    protected TextView noteText;
-    private TextView mTextView;
     private Button noteAddBtn;
 
     @Override
@@ -25,8 +23,6 @@ public class MainActivity extends Activity {
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
-                mTextView = (TextView) stub.findViewById(R.id.text);
-                noteText = (TextView) stub.findViewById(R.id.noteText);
                 noteAddBtn = (Button) stub.findViewById(R.id.createNoteBtn);
                 noteAddBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
