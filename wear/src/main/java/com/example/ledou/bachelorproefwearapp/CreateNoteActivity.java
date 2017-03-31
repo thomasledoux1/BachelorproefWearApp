@@ -10,6 +10,7 @@ import android.support.wearable.view.WatchViewStub;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -66,7 +67,8 @@ public class CreateNoteActivity extends Activity {
                     final TableRow row = (TableRow) getLayoutInflater().inflate(R.layout.table_row, null);
                     TextView txv;
                     txv = (TextView) row.findViewById(R.id.noteTextView);
-                    txv.setText("- " + result.get(0));
+                    String resultString = result.get(0).substring(0,1).toUpperCase() + result.get(0).substring(1);
+                    txv.setText("- " + resultString);
                     txv.setTextColor(Color.BLACK);
                     table.addView(row);
                     break;

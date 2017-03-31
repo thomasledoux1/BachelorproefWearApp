@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/note_background">
+    android:id="@+id/createNoteLayout"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/textView2"
@@ -27,11 +28,12 @@
 
     <TableLayout
         android:id="@+id/resultTable"
-        android:layout_width="180px"
+        android:layout_width="250px"
         android:layout_height="match_parent"
+        android:layout_above="@+id/backBtn"
         android:layout_below="@+id/voiceSearchBtn"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/backBtn">
+        android:background="@drawable/note_background">
 
         <TableRow
             android:layout_width="match_parent"
