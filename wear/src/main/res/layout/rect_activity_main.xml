@@ -14,9 +14,10 @@
         android:id="@+id/createNoteBtn"
         android:layout_width="match_parent"
         android:layout_height="60px"
+        android:text="Create new note"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:text="Create new note" />
+        android:layout_marginBottom="37dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -29,4 +30,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/viewPhotosBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="60px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:text="View photos" />
 </RelativeLayout>

@@ -8,12 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
 public class MainActivity extends Activity {
     private Button noteAddBtn;
+    private Button viewPhotosBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +27,24 @@ public class MainActivity extends Activity {
                         toCreateNotePage();
                     }
                 });
+                viewPhotosBtn = (Button) findViewById(R.id.viewPhotosBtn);
+                viewPhotosBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        toPhotosViewPage();
+                    }
+                });
             }
         });
     }
 
     public void toCreateNotePage() {
-        System.out.println("creating new note");
         Intent createNoteIntent = new Intent(MainActivity.this, CreateNoteActivity.class);
         MainActivity.this.startActivity(createNoteIntent);
+    }
+
+    public void toPhotosViewPage() {
+        Intent photosViewIntent = new Intent(MainActivity.this, PhotosViewActivity.class);
+        MainActivity.this.startActivity(photosViewIntent);
     }
 }
