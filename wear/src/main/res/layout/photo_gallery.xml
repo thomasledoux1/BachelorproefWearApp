@@ -3,12 +3,19 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/backBtnPhoto"
+        android:layout_width="75px"
+        android:layout_height="50px"
+        android:text="Back"
+        android:textSize="8sp" />
+
     <ViewAnimator
         android:id="@+id/animator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/backBtnPhoto">
 
         </ViewAnimator>
 </RelativeLayout>

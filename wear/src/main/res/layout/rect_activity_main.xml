@@ -10,26 +10,17 @@
     android:background="@drawable/background"
     android:weightSum="1">
 
-    <Button
-        android:id="@+id/createNoteBtn"
-        android:layout_width="match_parent"
-        android:layout_height="60px"
-        android:text="Create new note"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="37dp" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notes App"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Photo App"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/viewPhotosBtn"

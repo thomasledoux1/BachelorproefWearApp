@@ -9,8 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-    private Button noteAddBtn;
-    private Button viewPhotosBtn;
+   private Button viewPhotosBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +19,7 @@ public class MainActivity extends Activity {
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
-                noteAddBtn = (Button) stub.findViewById(R.id.createNoteBtn);
-                noteAddBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        toCreateNotePage();
-                    }
-                });
+
                 viewPhotosBtn = (Button) findViewById(R.id.viewPhotosBtn);
                 viewPhotosBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -38,10 +31,6 @@ public class MainActivity extends Activity {
         });
     }
 
-    public void toCreateNotePage() {
-        Intent createNoteIntent = new Intent(MainActivity.this, CreateNoteActivity.class);
-        MainActivity.this.startActivity(createNoteIntent);
-    }
 
     public void toPhotosViewPage() {
         Intent photosViewIntent = new Intent(MainActivity.this, PhotosViewActivity.class);
